@@ -1,0 +1,143 @@
+.header{
+    padding-top: 30px;
+
+    @include desktop{
+        padding-top: 30px;
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mobile{
+
+        justify-content: space-between;
+            position: relative;
+           min-width: 280px;
+           min-height: 102px;
+        }
+        }
+
+        &-logo-link{
+            @include tablet{
+            max-width: 80px;
+            display: block;
+            }
+
+            @include mobile{
+                max-width: 59px;
+                height: 56px;
+                position: absolute;
+                
+                @include abs-center;
+                top: 0;
+            }
+        }
+
+        &__menu{
+            font-size: 18px;
+        
+
+            &-list{
+                display: flex;
+                align-items: center;
+                column-gap: 42px;
+
+                @include desktop{
+                    column-gap: 20px;
+                }
+                @include tablet{
+                    column-gap: 10px;
+                    font-size: 14px;
+                }
+            }
+
+            &-link{
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                height: 48px;
+
+                @include hover {
+                    &::after{
+                        width: 100%;
+                    }
+                }
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    translate: -50%;
+                    width: 0;
+                    height: 2px;
+                    background-color: currentColor;
+                    transition-duration: inherit;
+                }
+
+            }
+        }
+        &-logo-link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            @include mobile{
+                position: absolute;
+                top: 30px;
+            }
+        }  
+        &-buttons{
+            width: 350px;
+            height: 70px;
+            @include flex-center;
+            justify-content: space-between;
+
+            @include tablet{
+                width: 230px;
+                height: 48px;
+                
+            }
+
+            @include mobile{
+                width: 100px;
+                position: absolute;
+                bottom: 0px;
+            }
+
+            
+
+            &-basket{
+                position: relative;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    right: -1px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: red;
+                }
+            }
+            &-search{
+                fill: #FFFFFF;
+            }
+
+            &-member{
+                @include tablet{
+                    height: 48px;
+                    width: 150px;
+                    line-height: 14px;
+                    font-size: 14px;
+                }
+
+            }
+            
+        }
+
+        
+    
+}
