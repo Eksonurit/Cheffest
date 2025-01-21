@@ -1,0 +1,76 @@
+.content{
+     
+
+    margin-top: 15px;
+
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8) 0%,   // Початок із чорного (80% прозорості)
+      rgba(0, 0, 0, 0.6) 40%,  // Плавний перехід до меншої прозорості
+      rgba(0, 0, 0, 0) 100%    // Прозорість в кінці
+  ),
+  url('./images/c374dbe7f4838439508a39f838016434.png');
+  background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 10%;
+
+max-height: 790px;
+
+@include mobile{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  margin-top: 0;
+  max-height: 543px;
+}
+}
+.hero{
+
+  &__body{
+    max-width: 652px;
+    max-height: 466px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+
+    @include mobile{
+      margin-top: 80px;
+    }
+
+    
+
+  }
+
+  &__title{
+    line-height: 96px;
+    font-weight: 900px;
+    
+    @include tablet{
+      line-height: 85px;
+    }
+
+    @include mobile{
+      line-height: 44px;
+    }
+  }
+  
+  &__description{
+    font-size: 20px;
+    line-height: 30px;
+
+    @include mobile{
+      line-height: 24px;
+    }
+  }
+
+  &__button{
+    max-width: 212px;
+    
+    @include tablet{
+      max-width: 300px;
+    }
+  }
+}
