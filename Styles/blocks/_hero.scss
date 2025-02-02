@@ -1,7 +1,8 @@
-.content{
+.welcome{
      
-
     margin-top: 15px;
+
+   
 
     background: linear-gradient(
       to right,
@@ -14,7 +15,11 @@
 background-repeat: no-repeat;
 background-position: 50% 10%;
 
-max-height: 790px;
+height: 790px;
+
+@include tablet{
+  max-height: 545px;
+}
 
 @include mobile{
   position: absolute;
